@@ -16,4 +16,16 @@ app.use(express.static("public")) //
 app.use(cookieParser())  //to access cookies of user's browser and also can set the cookies
 
 
+//routes import
+import userRouter from "./routes/user.routes.js"
+
+
+//routes declaration
+
+// app.get("/", (req, res) => {
+//     res.send("backend")
+// })
+
+
+app.use("/api/v1/users", userRouter)
 export { app }
